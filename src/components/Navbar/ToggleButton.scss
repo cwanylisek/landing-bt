@@ -1,5 +1,7 @@
 .toggle-button {
     display: flex;
+    position: fixed;
+    top: 5%;
     flex-direction: column;
     justify-content: space-between;
     height: 23px;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { conncect, connect } from 'react-redux'
+import { connect } from 'react-redux'
 import actions from '../../store/actions'
 import './ToggleButton.scss'
 
