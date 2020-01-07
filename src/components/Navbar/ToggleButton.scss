@@ -1,0 +1,35 @@
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 23px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 85vw;
+    box-sizing: border-box;
+    &:focus {
+        outline: none;
+    }
+    &__line {
+        width: 28px;
+        height: 3px;
+        border-radius: 30px;
+        background: #fff;
+        transform: rotate(0deg) translate(0px, 0px);
+        -moz-transform: rotate(0deg) translate(0px, 0px);
+        transition: all .2s ease;
+    }
+    &__cross--1 {
+        transform: rotate(45deg) translate(4.44px, 4px);
+        -moz-transform: rotate(45deg) translate(4.44px, 4px);
+    }
+    &__cross--2 {
+        opacity: 0;
+    }
+    &__cross--3 {
+        transform: rotate(-45deg) translate(8.5px, -8px);
+        -moz-transform: rotate(-45deg) translate(8.5px, -8px);
+    }
+}
