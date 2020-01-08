@@ -8,7 +8,13 @@ const open = () => ({
     type: types.OPEN
 })
 
+const date = addDate => ({
+    type: types.DATE,
+    addDate
+})
+
 export default {
     loading,
-    open
+    open,
+    date
 }
