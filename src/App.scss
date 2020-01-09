@@ -3,7 +3,10 @@ $base-color: #202022;
 .App {
     font-family: 'PT Sans', sans-serif;
     background-color: $base-color;
-    color: #fff;
+    color: #adadad;
     height: 100vh;
+    background-image: url('../src/assets/img/background-1789175_1280_withAlpha.png');
+    background-repeat: no-repeat;
+    background-position: 60vw 40vh;
 }
 

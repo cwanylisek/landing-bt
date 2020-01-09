@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Navbar.scss'
 
 const Navbar = props => {
@@ -11,9 +11,9 @@ const Navbar = props => {
     return (
         <nav className={drawerClasses.join(' ')}>
             <ul className="side-drawer__wrap">
-                <Link className="side-drawer__link" to='/'><li>home</li></Link>
-                <Link className="side-drawer__link" to='/about'><li>about</li></Link>
-                <Link className="side-drawer__link" to='/contact'><li>contact</li></Link>
+                <NavLink exact={true} className="side-drawer__link" activeClassName="side-drawer__link--active side-drawer__link--active--1" to='/'><li>home</li></NavLink>
+                <NavLink className="side-drawer__link" activeClassName="side-drawer__link--active side-drawer__link--active--2" to='/about'><li>about</li></NavLink>
+                <NavLink className="side-drawer__link" activeClassName="side-drawer__link--active side-drawer__link--active--3" to='/contact'><li>contact</li></NavLink>
             </ul>
         </nav>
     )

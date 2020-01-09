@@ -25,6 +25,28 @@
         text-decoration: none;
         color: #fff;
         margin: 2px 0;
+        transition: color .3s ease-in-out;
+        &:hover {
+            color: #adadad;
+        }
+        &--active {
+            font-weight: 700;
+            &--1 {
+                li {
+                    color: #f5035f;
+                }
+            }
+            &--2 {
+                li {
+                    color: #fdcb00;
+                }
+            }
+            &--3 {
+                li {
+                    color: #00ebea;
+                }
+            }
+        }
     }
     &__button {
         padding: 10px 36px !important;

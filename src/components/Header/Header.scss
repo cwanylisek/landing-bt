@@ -10,7 +10,8 @@
         display: flex;
         margin-left: 5%;
         h1 {
-            background-color: #fdcb00;
+            background-color: #f5035f;
+            color: #fff;
             width: 40px;
             height: 40px;
             text-align: center;
@@ -18,6 +19,16 @@
             display: flex;
             align-items: center;
             border-radius: 4px;
+        }
+        &--yellow {
+            h1 {
+                background-color: #fdcb00;
+            }
+        }
+        &--purple {
+            h1 {
+                background-color: #00ebea;
+            }
         }
     }
 }

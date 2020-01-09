@@ -1,9 +1,18 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import './Contact.scss'
 
-const Contact = () => {
+const Contact = props => {
     return (
-        <div>
-            contact cmp
+        <div className="contact__container">
+            <a href="https://github.com/cwanylisek" target='_blank'>
+                <FontAwesomeIcon className="contact__github" icon={faGithub} size="3x" />
+            </a>
+            <a href="https://www.linkedin.com/in/bartosz-tylkowski-429862146/" target='_blank'>
+                <FontAwesomeIcon className="contact__linkedin" icon={faLinkedin} size="3x" />
+            </a>
         </div>
     )
 }

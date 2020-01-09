@@ -1,0 +1,36 @@
+.contact {
+    &__container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        a {
+            margin: 15px;
+        }
+    }
+    &__github {
+        color: #adadad;
+        transition: color .3s ease-in-out;
+        &:hover {
+            color: #000;
+        }
+    }
+    &__linkedin {
+        color: #adadad;
+        transition: color .3s ease-in-out;
+        &:hover {
+            color: #0077B5;
+        }
+    }
+}
+
+@media (min-width: 767px) {
+    .contact {
+        &__container {
+            flex-direction: row;
+        }
+    }
+}

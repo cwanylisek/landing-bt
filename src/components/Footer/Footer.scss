@@ -1,8 +1,10 @@
 .footer {
     left: 0;
     bottom: 0;
-    width: 100%;
-    color: white;
+    width: 50%;
     text-align: center;
     position: fixed;
+    p {
+        color: #434f4e;
+    }
 }
