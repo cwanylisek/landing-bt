@@ -7,7 +7,7 @@ const INITIAL_STATE = {
     date: 'data',
     name: 'BARTOSZ TYLKOWSKI',
     text: 'FRONT-END DEVELOPER',
-    about: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda hic quis ipsa perferendis, ipsam obcaecati harum rem minus eius libero optio reiciendis, aut esse modi nobis, dignissimos molestiae doloremque! Eum.'
+    about: "React enthusiast intrested in new technologies. Im experienced in most acctual frontend tools. Allways looking for opportunity in new intresting project for improve myself in developer's world. Feel free to contact me for more info!"
 }
 
 const baseReducer = ( state = INITIAL_STATE, action) => {

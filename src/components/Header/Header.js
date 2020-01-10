@@ -16,9 +16,9 @@ const Header = props => {
     let headerClass = ['header__tag']
     const location = useLocation();
     console.log(location.pathname)
-    if (location.pathname == '/about') {
+    if (location.pathname === '/about') {
         headerClass = ['header__tag', 'header__tag--yellow']
-    } else if (location.pathname == '/contact') {
+    } else if (location.pathname === '/contact') {
         headerClass = ['header__tag', 'header__tag--purple']
     }
 

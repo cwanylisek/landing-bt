@@ -10,5 +10,15 @@
     }
     &__text {
         color: #adadad;
+        width: 60%;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 767px) {
+    .about {
+        &__text {
+            font-size: 20px;
+        }
     }
 }
