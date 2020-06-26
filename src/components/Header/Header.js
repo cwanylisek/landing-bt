@@ -1,35 +1,46 @@
-import React,{ useEffect } from 'react'
-import { connect } from 'react-redux'
-import { useLocation } from 'react-router-dom'
-import moment from 'moment'
-import actions from '../../store/actions'
-import './Header.scss'
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import moment from 'moment';
+import actions from '../../store/actions';
+import './Header.scss';
 
 const Header = props => {
 
     useEffect(() => {
         let today = moment().format('DD MMM YYYY');
-        console.log(today, 'data')
-        props.dispatch(actions.date(today))
-    })
+        props.dispatch(actions.date(today));
+    });
 
-    let headerClass = ['header__tag']
+    let headerClass = ['header__tag'];
+
     const location = useLocation();
-    console.log(location.pathname)
+
     if (location.pathname === '/about') {
         headerClass = ['header__tag', 'header__tag--yellow']
     } else if (location.pathname === '/contact') {
         headerClass = ['header__tag', 'header__tag--purple']
-    }
+    };
 
     return (
         <div className="header__container">
-            <div className="header__date">
+            <motion.div
+                className="header__date"
+                initial={{ y: -50 }}
+                animate={{ y: 0 }}
+                transition={{ delay: 0.5, type: 'tween' }}
+            >
                 <h5>{props.date}</h5>
-            </div>
-            <div className={headerClass.join(' ')}>
+            </motion.div>
+            <motion.div
+                className={headerClass.join(' ')}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+            >
                 <h1>BT</h1>
-            </div>
+            </motion.div>
         </div>
     )
 }
