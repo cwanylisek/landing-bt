@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
@@ -7,13 +7,13 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
     <BrowserRouter>
         <Provider store={store}>
             <App />
         </Provider>
-    </BrowserRouter>,
-    document.getElementById('root')
+    </BrowserRouter>
 );
 
 serviceWorker.unregister();
