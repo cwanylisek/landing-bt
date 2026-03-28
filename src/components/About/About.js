@@ -1,11 +1,12 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { motion } from 'framer-motion'
-import './About.scss'
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import './About.scss';
 
 const About = props => {
     return (
-        <motion.div 
+        <motion.div
             className="about__container"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -13,11 +14,15 @@ const About = props => {
         >
             <p className="about__text">{props.about}</p>
         </motion.div>
-    )
-}
+    );
+};
+
+About.propTypes = {
+    about: PropTypes.string.isRequired,
+};
 
 const mapStateToProps = state => ({
-    about: state.baseReducer.about
-})
+    about: state.baseReducer.about,
+});
 
-export default connect(mapStateToProps)(About)
+export default connect(mapStateToProps)(About);

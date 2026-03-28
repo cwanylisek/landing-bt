@@ -1,9 +1,11 @@
-const LOADING = 'LOADING'
-const OPEN = 'OPEN'
-const DATE = 'DATE'
+const LOADING = 'LOADING';
+const OPEN = 'OPEN';
+const DATE = 'DATE';
 
-export default {
+const types = {
     LOADING,
     OPEN,
-    DATE
-}
+    DATE,
+};
+
+export default types;

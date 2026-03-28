@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import moment from 'moment';
@@ -7,21 +8,20 @@ import actions from '../../store/actions';
 import './Header.scss';
 
 const Header = props => {
-
     useEffect(() => {
-        let today = moment().format('DD MMM YYYY');
+        const today = moment().format('DD MMM YYYY');
         props.dispatch(actions.date(today));
-    });
+    }, [props]);
 
     let headerClass = ['header__tag'];
 
     const location = useLocation();
 
     if (location.pathname === '/about') {
-        headerClass = ['header__tag', 'header__tag--yellow']
+        headerClass = ['header__tag', 'header__tag--yellow'];
     } else if (location.pathname === '/contact') {
-        headerClass = ['header__tag', 'header__tag--purple']
-    };
+        headerClass = ['header__tag', 'header__tag--purple'];
+    }
 
     return (
         <div className="header__container">
@@ -42,15 +42,16 @@ const Header = props => {
                 <h1>BT</h1>
             </motion.div>
         </div>
-    )
-}
+    );
+};
+
+Header.propTypes = {
+    date: PropTypes.string.isRequired,
+    dispatch: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
-    date: state.baseReducer.date
-})
+    date: state.baseReducer.date,
+});
 
-// const mapDispatchToProps = dispatch => ({
-//     date: () => dispatch(actions.date(today))
-// })
-
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps)(Header);
