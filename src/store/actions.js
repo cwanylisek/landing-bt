@@ -13,8 +13,10 @@ const date = addDate => ({
     addDate,
 });
 
-export default {
+const actions = {
     loading,
     open,
     date,
 };
+
+export default actions;

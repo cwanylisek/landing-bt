@@ -2,8 +2,10 @@ const LOADING = 'LOADING';
 const OPEN = 'OPEN';
 const DATE = 'DATE';
 
-export default {
+const types = {
     LOADING,
     OPEN,
     DATE,
 };
+
+export default types;
