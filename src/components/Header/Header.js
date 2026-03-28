@@ -11,7 +11,7 @@ const Header = props => {
     useEffect(() => {
         const today = moment().format('DD MMM YYYY');
         props.dispatch(actions.date(today));
-    }, [props.dispatch]);
+    }, [props]);
 
     let headerClass = ['header__tag'];
 
