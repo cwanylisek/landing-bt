@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
@@ -18,9 +18,11 @@ function App() {
                 <Header />
             </section>
             <main>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
             </main>
             <Footer />
         </div>

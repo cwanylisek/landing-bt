@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import './Home.scss';
 
 const Home = props => {
-
     return (
         <motion.div
             className="home__container"
@@ -18,9 +18,14 @@ const Home = props => {
     );
 };
 
+Home.propTypes = {
+    name: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+};
+
 const mapStateToProps = state => ({
     name: state.baseReducer.name,
-    text: state.baseReducer.text
+    text: state.baseReducer.text,
 });
 
 export default connect(mapStateToProps)(Home);

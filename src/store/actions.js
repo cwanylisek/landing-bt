@@ -1,20 +1,20 @@
 import types from './types';
 
 const loading = () => ({
-    type: types.LOADING
+    type: types.LOADING,
 });
 
 const open = () => ({
-    type: types.OPEN
-})
+    type: types.OPEN,
+});
 
 const date = addDate => ({
     type: types.DATE,
-    addDate
-})
+    addDate,
+});
 
 export default {
     loading,
     open,
-    date
-}
+    date,
+};
